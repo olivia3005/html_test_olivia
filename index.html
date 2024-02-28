@@ -4,32 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pferde Website</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.wehorse.com/de/blog/wp-content/uploads/2023/06/pre-wehorse.png');
+            background-size: cover;
+            height: 100%;
+        }
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .sidebar .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Willkommen auf unserer Pferde Website</h1>
-    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wehorse.com%2Fde%2Fblog%2Fpre-pferd%2F&psig=AOvVaw0zddynK9llnFiqZaBpTScY&ust=1709221636017000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjv0_awzoQDFQAAAAAdAAAAABAD" alt="Pferd auf der Startseite" />
 
-    <h2>Menü</h2>
-    <nav>
-        <ul>
-            <li><a href="#warmblueter">Warmblüter</a></li>
-            <li><a href="#kaltblueter">Kaltblüter</a></li>
-        </ul>
-    </nav>
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+    <a href="#warmblueter">Warmblüter</a>
+    <a href="#kaltblueter">Kaltblüter</a>
+</div>
 
-    <section id="warmblueter">
-        <h2>Warmblüter</h2>
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.horsedeal24.com%2Fpferderassen%2Fschweizer-warmblut&psig=AOvVaw2-0iUgvGjXxI6oeyl6GJUq&ust=1709221674919000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCICq1ZGxzoQDFQAAAAAdAAAAABAD" alt="Warmblüter 1" />
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pferde-kaerntenaustria.at%2Fde%2Frasseportrait-warmblut.html&psig=AOvVaw2-0iUgvGjXxI6oeyl6GJUq&ust=1709221674919000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCICq1ZGxzoQDFQAAAAAdAAAAABAI" alt="Warmblüter 2" />
-        
-    </section>
+<div class="menu-icon" onclick="openNav()">☰</div>
 
-    <section id="kaltblueter">
-        <h2>Kaltblüter</h2>
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpferde.fandom.com%2Fde%2Fwiki%2FKaltblut&psig=AOvVaw0bSIdZM7bmtMbZNjDNF7_S&ust=1709221754673000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJDHr7GxzoQDFQAAAAAdAAAAABAD" alt="Kaltblüter 1" />
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.loesdau.de%2Faufs-kaltblut-gekommen%2F&psig=AOvVaw0bSIdZM7bmtMbZNjDNF7_S&ust=1709221754673000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJDHr7GxzoQDFQAAAAAdAAAAABAI" alt="Kaltblüter 2" />
-        
-    </section>
+<section id="warmblueter">
+    <h2>Warmblüter</h2>
+    <img src="https://www.horsedeal24.com/page/wp-content/uploads/2021/12/schweizer-warmblut-pferderasse.jpg" alt="Warmblüter 1" />
+    <img src="https://www.pferde-kaerntenaustria.at/media/zoombild/siegerin-reitpferde-vierjaehrig-belantis-girl.jpg" alt="Warmblüter 2" />
+</section>
+
+<section id="kaltblueter">
+    <h2>Kaltblüter</h2>
+    <img src="https://static.wikia.nocookie.net/pferde-und-ponys/images/3/36/Shire-Horse-HD-Picture-1-.jpg/revision/latest?cb=20170807224655&path-prefix=de" alt="Kaltblüter 1" />
+    <img src="https://blog.loesdau.de/wp-content/uploads/2016/01/Asterix-A-Dressur-bei-Ludwigsburg.jpg" alt="Kaltblüter 2" />
+</section>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+    }
+</script>
+
 </body>
 </html>
 
