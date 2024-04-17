@@ -2,89 +2,62 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pferde Website</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
+        body {
             font-family: Arial, sans-serif;
-            background-image: url('https://www.wehorse.com/de/blog/wp-content/uploads/2023/06/pre-wehorse.png');
-            background-size: cover;
-            height: 100%;
         }
-        .menu-icon {
-            font-size: 30px;
-            cursor: pointer;
+        header {
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #007bff;
+            color: white;
             padding: 10px;
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            text-align: center;
         }
-        .sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-        .sidebar a {
-            padding: 10px 15px;
+        nav a {
+            color: white;
+            padding: 8px 16px;
             text-decoration: none;
-            font-size: 25px;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
         }
-        .sidebar a:hover {
-            color: #f1f1f1;
+        nav a:hover {
+            background-color: #0056b3;
         }
-        .sidebar .close-btn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
+        section {
+            margin: 15px 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
         }
     </style>
 </head>
 <body>
-
-<div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
-    <a href="#warmblueter">Warmblüter</a>
-    <a href="#kaltblueter">Kaltblüter</a>
-</div>
-
-<div class="menu-icon" onclick="openNav()">☰</div>
-
-<section id="warmblueter">
-    <h2>Warmblüter</h2>
-    <img src="https://www.horsedeal24.com/page/wp-content/uploads/2021/12/schweizer-warmblut-pferderasse.jpg" alt="Warmblüter 1" />
-    <img src="https://www.pferde-kaerntenaustria.at/media/zoombild/siegerin-reitpferde-vierjaehrig-belantis-girl.jpg" alt="Warmblüter 2" />
-</section>
-
-<section id="kaltblueter">
-    <h2>Kaltblüter</h2>
-    <img src="https://static.wikia.nocookie.net/pferde-und-ponys/images/3/36/Shire-Horse-HD-Picture-1-.jpg/revision/latest?cb=20170807224655&path-prefix=de" alt="Kaltblüter 1" />
-    <img src="https://blog.loesdau.de/wp-content/uploads/2016/01/Asterix-A-Dressur-bei-Ludwigsburg.jpg" alt="Kaltblüter 2" />
-</section>
-
-<script>
-    function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-    }
-
-    function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-    }
-</script>
-
+    <header>
+        <h1>Willkommen auf der Pferde Website</h1>
+    </header>
+    <nav>
+        <a href="#araber">Araber</a>
+        <a href="#friesen">Friesen</a>
+        <a href="#appaloosa">Appaloosa</a>
+        <a href="#paint-horse">Paint Horse</a>
+    </nav>
+    <section>
+        <h2 id="araber">Araber</h2>
+        <p>Araber sind bekannt für ihre Ausdauer und werden oft im Distanzreiten verwendet.</p>
+    </section>
+    <section>
+        <h2 id="friesen">Friesen</h2>
+        <p>Friesen zeichnen sich durch ihr schwarzes Fell und ihre beeindruckende Mähne aus.</p>
+    </section>
+    <section>
+        <h2 id="appaloosa">Appaloosa</h2>
+        <p>Appaloosas sind bekannt für ihre einzigartigen Fellmuster und ihre Vielseitigkeit.</p>
+    </section>
+    <section>
+        <h2 id="paint-horse">Paint Horse</h2>
+        <p>Paint Horses haben oft auffällige Farb- und Fleckenmuster, die sie besonders machen.</p>
+    </section>
 </body>
 </html>
-
