@@ -32,13 +32,21 @@
             background-color: #f0f0f0;
         }
     </style>
+    <script> 
+    function showtab(tabname){
+        sections=document.getElementsByTagName('section');
+        sections.forEach(element => {
+        if(element.id==tabname){element.style.display='block'}else{element.style.display='none'}    
+        });
+    }
+    </script>
 </head>
 <body>
     <header>
         <h1>Willkommen auf der Pferde Website</h1>
     </header>
     <nav>
-        <a href="#araber">Araber</a>
+        <a href="#araber" onclick="showtab('araber')">Araber</a>
         <a href="#friesen">Friesen</a>
         <a href="#appaloosa">Appaloosa</a>
         <a href="#paint-horse">Paint Horse</a>
